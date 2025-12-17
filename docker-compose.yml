@@ -7,5 +7,9 @@ services:
     ports:
       - "5006:80"
     volumes:
-      - ./:/var/www/html
-      - ./moodledata:/var/www/moodledata
+      - moodledata:/var/www/moodledata
+      - moodleconfig:/var/www/html/config.php
+
+volumes:
+  moodledata:
+  moodleconfig:
