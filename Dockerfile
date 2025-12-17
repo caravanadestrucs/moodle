@@ -53,5 +53,8 @@ RUN mkdir -p /var/www/moodledata /var/www/html/config \
  && chown -R www-data:www-data /var/www/html /var/www/moodledata \
  && chmod -R 755 /var/www/html \
  && chmod -R 777 /var/www/moodledata
+ 
+RUN echo "max_input_vars=10000" > /usr/local/etc/php/conf.d/moodle.ini
+
 
 WORKDIR /var/www/html
