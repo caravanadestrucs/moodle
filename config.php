@@ -13,7 +13,7 @@ $CFG->prefix    = 'mdl_';
 
 $CFG->dboptions = [
     'dbpersist' => false,
-    'dbport' => 3307,                 // 🔴 IMPORTANTE
+    'dbport' => 3308,                 // 🔴 IMPORTANTE
     'dbsocket' => '',
     'dbcollation' => 'utf8mb4_unicode_ci',
 ];
