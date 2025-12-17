@@ -26,7 +26,8 @@ RUN sed -i 's|AllowOverride None|AllowOverride All|g' /etc/apache2/apache2.conf
 RUN sed -i 's/DirectoryIndex .*/DirectoryIndex index.php index.html/' /etc/apache2/mods-enabled/dir.conf
 
 # 👇 VirtualHost CORRECTO para Moodle (PUBLIC)
-RUN echo '<VirtualHost *:80>
+RUN cat <<'EOF' > /etc/apache2/sites-available/000-default.conf
+<VirtualHost *:80>
     DocumentRoot /var/www/html/public
 
     <Directory /var/www/html/public>
@@ -41,7 +42,8 @@ RUN echo '<VirtualHost *:80>
 
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>' > /etc/apache2/sites-available/000-default.conf
+</VirtualHost>
+EOF
 
 # 👇 Copiar Moodle a la imagen
 COPY . /var/www/html
