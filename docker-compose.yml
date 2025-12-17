@@ -8,8 +8,7 @@ services:
       - "5006:80"
     volumes:
       - moodledata:/var/www/moodledata
-      - moodleconfig:/var/www/html/config.php
-
+      - moodleconfig:/var/www/html/
 volumes:
   moodledata:
   moodleconfig:
