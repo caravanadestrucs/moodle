@@ -28,6 +28,9 @@ RUN sed -i 's/DirectoryIndex .*/DirectoryIndex index.php index.html/' /etc/apach
 # 👇 VirtualHost CORRECTO para Moodle (PUBLIC)
 RUN cat <<'EOF' > /etc/apache2/sites-available/000-default.conf
 <VirtualHost *:80>
+    ServerName alumnos.felipe-villa-nueva-teotitlan.site
+    ServerAlias www.alumnos.felipe-villa-nueva-teotitlan.site
+
     DocumentRoot /var/www/html/public
 
     <Directory /var/www/html/public>
