@@ -20,6 +20,7 @@ $CFG->dboptions = [
 
 $CFG->wwwroot   = 'https://alumnos.felipe-villa-nueva-teotitlan.site';
 $CFG->dataroot  = '/var/www/moodledata';
+$CFG->sslproxy = true;
 
 $CFG->directorypermissions = 02777;
 
