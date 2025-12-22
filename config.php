@@ -18,7 +18,7 @@ $CFG->dboptions = [
     'dbcollation' => 'utf8mb4_unicode_ci',
 ];
 
-$CFG->wwwroot   = 'http://89.116.51.59:5006';
+$CFG->wwwroot   = 'https://alumnos.felipe-villa-nueva-teotitlan.site';
 $CFG->dataroot  = '/var/www/moodledata';
 
 $CFG->directorypermissions = 02777;
