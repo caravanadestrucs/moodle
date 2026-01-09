@@ -4,8 +4,6 @@ services:
   moodle:
     build: .
     container_name: moodle_app
-    ports:
-      - "5006:80"
     volumes:
       - moodledata:/var/www/moodledata
       - moodleconfig:/var/www/html/
